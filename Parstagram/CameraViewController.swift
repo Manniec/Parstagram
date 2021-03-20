@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage //for resizeing image
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -34,6 +35,19 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //retrieve image from returned dictionary
+        let image = info[.editedImage] as! UIImage
+        //resize image so not too big
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageScaled(to: size)
+        imageField.image = scaledImage
+        
+        //dismiss camera view
+        dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func onPostButton(_ sender: Any) {
