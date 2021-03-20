@@ -20,6 +20,9 @@ class CameraViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onCameraButton(_ sender: Any) {
+    }
+    
     @IBAction func onPostButton(_ sender: Any) {
     }
     

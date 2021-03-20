@@ -129,6 +129,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="PdH-Jh-JTm">
                                 <rect key="frame" x="10" y="54" width="394" height="375"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="w5g-zr-DN7" appends="YES" id="iCZ-ta-LuI"/>
+                                </connections>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fOI-Kx-EUc" userLabel="ImageCaptionTextField">
                                 <rect key="frame" x="20" y="437" width="374" height="34"/>
@@ -162,6 +166,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flZ-74-BnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w5g-zr-DN7" userLabel="Image Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="onCameraButton:" destination="YRQ-Vh-920" id="JKO-Z7-e5Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2428.985507246377" y="55.580357142857139"/>
         </scene>
