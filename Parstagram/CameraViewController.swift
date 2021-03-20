@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage //for resizeing image
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
