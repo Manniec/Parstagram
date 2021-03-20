@@ -11,7 +11,7 @@
         <!--Login Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login Screen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login Screen" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="mjk-eh-CRi" id="W87-c5-DIg"/>
                         <outlet property="usernameTextField" destination="Yxy-19-Jl2" id="8uJ-z9-C8R"/>
+                        <segue destination="BfN-ge-Kz3" kind="presentation" identifier="loginSegue" id="o8a-SJ-4As"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,7 +100,7 @@
         <!--Main Feed-->
         <scene sceneID="ZAg-Y7-90N">
             <objects>
-                <viewController title="Main Feed" id="o2h-YR-bVv" customClass="FeedViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main Feed" modalPresentationStyle="fullScreen" id="o2h-YR-bVv" customClass="FeedViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ng6-Hk-dAk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +116,7 @@
         <!--Navigation Controller-->
         <scene sceneID="WHh-TD-Ye1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BfN-ge-Kz3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="BfN-ge-Kz3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4vJ-ut-LuC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
