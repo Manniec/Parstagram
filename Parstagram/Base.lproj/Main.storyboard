@@ -47,10 +47,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usy-zV-kNr">
                                 <rect key="frame" x="67" y="473" width="54" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sae-hq-cQr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHU-GN-nRo">
                                 <rect key="frame" x="302" y="473" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53J-Wa-DLU"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="lNd-JJ-Jbr">
                                 <rect key="frame" x="67" y="215" width="280" height="108"/>
@@ -81,6 +87,10 @@
                             <constraint firstItem="KHU-GN-nRo" firstAttribute="leading" secondItem="Usy-zV-kNr" secondAttribute="trailing" constant="181" id="yJH-Qw-TEy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="mjk-eh-CRi" id="W87-c5-DIg"/>
+                        <outlet property="usernameTextField" destination="Yxy-19-Jl2" id="8uJ-z9-C8R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
