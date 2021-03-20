@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageField: UIImageView!
     
@@ -21,6 +21,19 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
+        //special built in view controller
+        let picker = UIImagePickerController()
+        picker.delegate = self //returns photo when return from camera view controller
+        picker.allowsEditing = true //shows photo editing screen for tweaking before finishing up photo
+        
+        //Check to see if camera is available
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        } else{//if camera is not available
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
     }
     
     @IBAction func onPostButton(_ sender: Any) {
