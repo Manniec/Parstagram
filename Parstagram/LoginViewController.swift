@@ -21,6 +21,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignUp(_ sender: Any) {
+        //Copy username and password pf user setup from Back4App API documentation
+        let user = PFUser()
+        user.username = usernameTextField.text
+        user.password = passwordTextField.text
+        
+        user.signUpInBackground { (success, error) in
+            if success {
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else{ //error case
+                print("Error: \(String(describing: error))")
+            }
+        }
     }
     @IBAction func onSignIn(_ sender: Any) {
     }
