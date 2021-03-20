@@ -126,13 +126,23 @@
                     <view key="view" contentMode="scaleToFill" id="qXs-kj-3CH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="PdH-Jh-JTm">
+                                <rect key="frame" x="10" y="54" width="394" height="375"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bvG-15-rqA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PdH-Jh-JTm" firstAttribute="top" secondItem="bvG-15-rqA" secondAttribute="top" constant="10" id="3qq-w6-beZ"/>
+                            <constraint firstItem="bvG-15-rqA" firstAttribute="trailing" secondItem="PdH-Jh-JTm" secondAttribute="trailing" constant="10" id="9Rz-l2-bff"/>
+                            <constraint firstItem="PdH-Jh-JTm" firstAttribute="leading" secondItem="bvG-15-rqA" secondAttribute="leading" constant="10" id="fvL-3j-D7B"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flZ-74-BnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="56"/>
+            <point key="canvasLocation" x="2428.985507246377" y="55.580357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WHh-TD-Ye1">
@@ -154,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
         <systemColor name="systemBackgroundColor">
