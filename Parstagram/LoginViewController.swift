@@ -35,6 +35,18 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func onSignIn(_ sender: Any) {
+        let username = usernameTextField.text!
+        let password = passwordTextField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+            //at this point you either have a user or its nil
+            if user != nil { // Do stuff after successful login.
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+              } else {// The login failed. Check error to see why.
+                print("Error: \(String(describing: error))")
+              }
+        }
+        
     }
     
     
