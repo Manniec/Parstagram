@@ -122,7 +122,7 @@
         <!--Camera-->
         <scene sceneID="FVB-wd-TWt">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YRQ-Vh-920" userLabel="Camera" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YRQ-Vh-920" userLabel="Camera" customClass="CameraViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qXs-kj-3CH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
