@@ -66,8 +66,8 @@
                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53J-Wa-DLU"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="lNd-JJ-Jbr">
-                                <rect key="frame" x="79.5" y="215" width="255" height="108"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="instagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="lNd-JJ-Jbr">
+                                <rect key="frame" x="65" y="215" width="284" height="108"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -78,6 +78,8 @@
                             <constraint firstItem="Usy-zV-kNr" firstAttribute="top" secondItem="mjk-eh-CRi" secondAttribute="bottom" constant="8" symbolic="YES" id="9aB-2k-thl"/>
                             <constraint firstItem="kr7-Qx-pBm" firstAttribute="top" secondItem="Yxy-19-Jl2" secondAttribute="bottom" constant="8" symbolic="YES" id="DbD-4c-tlM"/>
                             <constraint firstItem="Usy-zV-kNr" firstAttribute="leading" secondItem="mjk-eh-CRi" secondAttribute="leading" id="ESh-qw-1L0"/>
+                            <constraint firstItem="lNd-JJ-Jbr" firstAttribute="leading" secondItem="Yxy-19-Jl2" secondAttribute="leading" id="IFH-hV-T9T"/>
+                            <constraint firstItem="lNd-JJ-Jbr" firstAttribute="trailing" secondItem="Yxy-19-Jl2" secondAttribute="trailing" id="Ius-0B-sxN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mjk-eh-CRi" secondAttribute="trailing" constant="65" id="SWb-9h-Hpd"/>
                             <constraint firstItem="mjk-eh-CRi" firstAttribute="leading" secondItem="kr7-Qx-pBm" secondAttribute="leading" id="WTQ-t7-AFW"/>
                             <constraint firstItem="KHU-GN-nRo" firstAttribute="trailing" secondItem="mjk-eh-CRi" secondAttribute="trailing" id="YCv-ec-4n8"/>
