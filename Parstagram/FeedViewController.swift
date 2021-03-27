@@ -94,9 +94,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }else{
                 print("Error saving comment")
             }
-       
-       
-       }
+    
+        }
+        
+        tableView.reloadData() //refresh so comment appears
         
         //Clear and dismiss input bar (same as keyboardWillBeHidden
         commentBar.inputTextView.text = nil
