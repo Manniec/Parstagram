@@ -159,6 +159,41 @@
                                             <outlet property="usernameLabel" destination="Hvz-kA-YQG" id="rYQ-DB-gjV"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" id="nZ2-ub-lCX" userLabel="Comment Cell" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="463" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nZ2-ub-lCX" id="dy9-MU-d58">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="commenter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaC-7b-04P">
+                                                    <rect key="frame" x="36" y="11" width="92" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-ee-FLM">
+                                                    <rect key="frame" x="136" y="11" width="72" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="sGb-ee-FLM" secondAttribute="bottom" id="2Ln-9d-OnQ"/>
+                                                <constraint firstItem="oaC-7b-04P" firstAttribute="leading" secondItem="dy9-MU-d58" secondAttribute="leadingMargin" constant="16" id="6y1-D5-6jc"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="oaC-7b-04P" secondAttribute="bottom" id="IOT-OS-sH0"/>
+                                                <constraint firstItem="sGb-ee-FLM" firstAttribute="leading" secondItem="oaC-7b-04P" secondAttribute="trailing" constant="8" symbolic="YES" id="NaK-DF-DYa"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="sGb-ee-FLM" secondAttribute="trailing" constant="1" id="TiF-9k-a4p"/>
+                                                <constraint firstItem="sGb-ee-FLM" firstAttribute="top" secondItem="oaC-7b-04P" secondAttribute="top" id="qE1-zP-LlW"/>
+                                                <constraint firstItem="oaC-7b-04P" firstAttribute="top" secondItem="dy9-MU-d58" secondAttribute="topMargin" id="vGv-5L-A2B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="sGb-ee-FLM" id="esC-Bu-GEY"/>
+                                            <outlet property="nameLabel" destination="oaC-7b-04P" id="PTv-Dw-r9k"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
