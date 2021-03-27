@@ -81,5 +81,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         delegate.window?.rootViewController = loginViewController
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 
 }
