@@ -8,10 +8,13 @@
 import UIKit
 import Parse
 import AlamofireImage
+import MessageInputBar
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    let commentBar = MessageInputBar()
     
     var posts = [PFObject]() //array called posts
     
@@ -37,6 +40,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData() //refresh feed to display posts
             }
         }
+    }
+    
+    //Following MessageInputBar Pod
+    override var inputAccessoryView: UIView?{
+        return commentBar
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
     }
     
     //Two required functions for datasource
