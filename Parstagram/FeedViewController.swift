@@ -15,6 +15,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     let commentBar = MessageInputBar()
+    var showsCommentBar = false //hide text input bar by default
     
     var posts = [PFObject]() //array called posts
     
@@ -24,6 +25,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        //Dismiss keyboard by dragging down on table view
+        tableView.keyboardDismissMode = .interactive
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,7 +61,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let post = posts[section]
         let comments = (post["comments"] as? [PFObject]) ?? []
         
-        return comments.count + 1
+        return comments.count + 2
+        //the 2 counts the post and AddComment cells
         
     }
     
@@ -88,7 +94,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             return cell
             
-        } else {
+        } else if (indexPath.row <= comments.count){
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
             
             let comment = comments[indexPath.row - 1]
@@ -97,6 +103,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
             
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
             return cell
         }
         
@@ -120,11 +129,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Specify the post your commenting to
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.section]
+        //need to change this to section instead of row
         
-        //Create comment object
-        let comment = PFObject(className: "Comments")
-        //Add Comment elements (columns to Comment table)
+        let comments = (post["comments"] as? [PFObject]) ?? []
+        
+        //Display comment text bar if add comment cell is tapped
+        if (indexPath.row == comments.count + 1) {
+            showsCommentBar = true
+            becomeFirstResponder()
+            commentBar.inputTextView.becomeFirstResponder()
+            
+        }
+        
+        
+        /*
+        //Add Fake Comment elements (columns to Comment table)
+         
+         //Create comment object
+         let comment = PFObject(className: "Comments")
+         
         comment["text"] = "This is a random comment"
         comment["post"] = post
         comment["author"] = PFUser.current()!
@@ -136,7 +160,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }else{
                 print("Error saving comment")
             }
+        
+        
         }
+         */
     }
 
 }
